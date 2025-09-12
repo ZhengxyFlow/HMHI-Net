@@ -64,7 +64,7 @@ In this work, we propose a novel method **HMHI-Net** for **Unsupervised Video Ob
 pip install -r requirements.txt
 ```
 
-Thanks to 🔗 [[RAFT](https://github.com/calledit)] for providing a more detailed environment installation script!
+Thanks to 🔗 [[Calledit](https://github.com/calledit)] for providing a more detailed environment installation script!
 
 ```bash
 #!/bin/bash
@@ -106,11 +106,11 @@ mkdir -p Your_eval_data_path/FBMS2SEG_byvideo/frame/val
 | DAVSOD          | [🔗 Download](https://drive.google.com/file/d/1MHRmzFdsk4g9AM2fiYA9HaRH02W_8C44/view?usp=drive_link) |
 | ViSal           | [🔗 Download](https://drive.google.com/file/d/16TvwWj9EtdnNyE5qok0b1ta_1mFNSW5d/view?usp=drive_link) |
 
-#### Optical Flow Preparation
+#### ▶️ Optical Flow Preparation
 
 Following previous UVOS works, optical flow maps for both training and inference data are generated through 🔗 [[RAFT](https://github.com/princeton-vl/RAFT)].
 
-#### Folder Structure
+#### ▶️ Folder Structure
 
 Please Ensure to organize the data files as follows:
 ```bash
