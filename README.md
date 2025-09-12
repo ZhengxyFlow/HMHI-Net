@@ -63,7 +63,37 @@ In this work, we propose a novel method **HMHI-Net** for **Unsupervised Video Ob
 ```bash
 pip install -r requirements.txt
 ```
+
+Thanks to 🔗 [[RAFT](https://github.com/calledit)] for providing a more detailed environment installation script!
+
+```bash
+#!/bin/bash
+
+conda create -n env_name python=3.10
+conda activate env_name
+
+pip install torch numpy opencv-python timm mmcv bytecode IPython tensorboard scikit-image 
+
+git clone https://github.com/luo3300612/Visualizer
+
+cd Visualizer/
+python setup.py install
+cd ..
+
+
+mkdir -p checkpoint/pretrained/mit/
+wget -o checkpoint/pretrained/mit/mit_b1.pth https://download.openmmlab.com/mmsegmentation/v0.5/segformer/segformer_mit-b1_512x512_160k_ade20k/segformer_mit-b1_512x512_160k_ade20k_20220620_112037-c3f39e00.pth
+
+pip install gdown
+
+gdown --id 1OG_Dla9f-sBuoi3Q6mF55Au3rU-Fc9Sg -O checkpoint/infermodel.pth
+
+mkdir -p Your_eval_data_path/FBMS2SEG_byvideo/frame/val
+
+```
+
 ### 2. Data Preparation
+
 
 #### ▶️ Dataset Download
 
@@ -75,6 +105,12 @@ pip install -r requirements.txt
 | Youtube-Objects | [🔗 Download](https://drive.google.com/file/d/1dIK3IGZhINc1Cbv1i8Scx01558CSbjRl/view?usp=drive_link) |
 | DAVSOD          | [🔗 Download](https://drive.google.com/file/d/1MHRmzFdsk4g9AM2fiYA9HaRH02W_8C44/view?usp=drive_link) |
 | ViSal           | [🔗 Download](https://drive.google.com/file/d/16TvwWj9EtdnNyE5qok0b1ta_1mFNSW5d/view?usp=drive_link) |
+
+#### Optical Flow Preparation
+
+Following previous UVOS works, optical flow maps for both training and inference data are generated through 🔗 [[RAFT](https://github.com/princeton-vl/RAFT)].
+
+#### Folder Structure
 
 Please Ensure to organize the data files as follows:
 ```bash
@@ -117,6 +153,9 @@ data/
             ...
 ...
 ```
+
+### 3. Checkpoint Preparation 
+
 #### ▶️ Download Pretrained Model
 
 Download the pretrained model and save them in './checkpoint/pretrained/' for model training.
@@ -139,25 +178,25 @@ Download the pretrained model and save them in './checkpoint/pretrained/' for mo
 |               | [🔗 ViSal](https://drive.google.com/file/d/1dqItvX0A1PN88LxX10j18rgik1jvLjmU/view?usp=drive_link) |
 
 
-### 3. Training
+### 4. Training
 ```bash
 # Certain config values in the file may require modification to suit your local setup.
 bash scripts/train.sh
 ```
 
-### 4. Fine-Tuning
+### 5. Fine-Tuning
 ```bash
 # Certain config values in the file may require modification to suit your local setup.
 bash scripts/finetune.sh
 ```
 
-### 5. Inference
+### 6. Inference
 ```bash
 # Certain config values in the file may require modification to suit your local setup.
 bash scripts/infer.sh
 ```
 
-### 6. Evaluation
+### 7. Evaluation
 ```Python
 # Certain config values in the file may require modification to suit your local setup.
 
