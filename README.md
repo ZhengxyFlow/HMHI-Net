@@ -185,6 +185,7 @@ bash scripts/train.sh
 ```
 
 ### 5. Fine-Tuning
+Load the best-performing checkpoint on the corresponding dataset at the Training stage and start Fine-Tuning.
 ```bash
 # Certain config values in the file may require modification to suit your local setup.
 bash scripts/finetune.sh

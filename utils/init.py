@@ -50,7 +50,7 @@ def init_loss_func(opt):
 def init_scheduler(opt, optimizer):
     # scheduler = torch.optim.lr_scheduler.StepLR(optimizer,step_size=50, gamma = 0.5)
     # scheduler = torch.optim.lr_scheduler.CosineAnnealingLR(optimizer,T_max=70,eta_min=0)
-    scheduler = torch.optim.lr_scheduler.ExponentialLR(optimizer,gamma=0.9,last_epoch=-1)
+    scheduler = torch.optim.lr_scheduler.ExponentialLR(optimizer,gamma=0.99,last_epoch=-1)
     return scheduler
 
 
