@@ -61,7 +61,6 @@ def main(opt):
         epoch += 1
         start =time.time()
         iters = train_one_epoch(model, loss_func, optimizer, data_loader, sampler, writer, epoch, iters, total_iters, iters_pre_epoch, opt)
-        scheduler.step()
         end =time.time()
         if opt.local_rank == 0:
             writer.add_scalar('train_each_epoch_time', end-start, epoch)
