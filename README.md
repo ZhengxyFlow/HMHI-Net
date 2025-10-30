@@ -164,7 +164,7 @@ We adopt the Segformer models **pretrained on ImageNet-1k**
 
 | Pretrained Model        | Model Link                              |
 | ----------------| --------------------------------------- |
-| [🔗 Segformer (NeurIPS 21)](https://arxiv.org/abs/2105.15203)     | [🔗 Mit_b0 - Mit_b5](https://github.com/NVlabs/SegFormer?tab=readme-ov-file) |
+| [🔗 Segformer (NeurIPS 21)](https://arxiv.org/abs/2105.15203)     | [🔗 Mit_b0 - Mit_b5](https://github.com/NVlabs/SegFormer?tab=readme-ov-file)  or [🔗 GoogleDrive](https://drive.google.com/drive/folders/1i-lVLPTYyjM5LQo8C6cXEb0KitzcpO5Q?usp=drive_link)|
 | [🔗 Swin-Transformer (ICCV 21)](https://arxiv.org/abs/2103.14030)       | [🔗 Swin-T - Swin-B](https://github.com/SwinTransformer/Swin-Transformer-Semantic-Segmentation) |
 
 #### ▶️ Download HMHI-Net Checkpoints
